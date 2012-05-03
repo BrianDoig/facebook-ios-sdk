@@ -172,7 +172,7 @@ static void *finishedContext = @"finishedContext";
     [params setValue:@"json" forKey:@"format"];
     [params setValue:kSDK forKey:@"sdk"];
     [params setValue:kSDKVersion forKey:@"sdk_version"];
-    if ([self isSessionValid] && ![params objectForKey:@"access_token"]) {
+    if ([self isSessionValid]) {
         [params setValue:self.accessToken forKey:@"access_token"];
     }
     
